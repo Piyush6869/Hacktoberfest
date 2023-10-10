@@ -1,0 +1,173 @@
+<html>
+<head></head>
+<body>
+<div style={{background:''}}>
+<AppBar position="static" style={{background:'#D4E6FF'}}>
+  <Toolbar variant="dense">
+    
+    <Typography variant="h6" color="inherit" component="div">
+      Story
+    </Typography>
+  </Toolbar>
+</AppBar>
+<Grid container spacing={2}>
+  <Grid item xs={8}>
+<Box
+      sx={{
+        marginTop:5,
+        marginLeft:5,
+        // width: '60%',
+        height: 500,
+        backgroundColor: '#F8F3FF',
+        borderRadius:'15px',
+        padding:2
+        
+        
+      }}
+    >
+       <Paper
+    elevation={4}
+    sx={{
+      // marginrRight:5,
+      // marginLeft:5,
+      // width: '90%',
+      height: 25,
+      borderRadius:'15px',
+      padding:1,
+      
+      
+    }}>
+      <Grid container spacing={2}>
+        <Grid item xs={1}>
+<AutoStoriesIcon/>
+        </Grid>
+        <Grid item xs={11} textAlign={'left'}>
+        <Typography variant="h10" color="initial" id='title' style={{textAlign:'left'}} >{input}</Typography>
+        </Grid>
+      </Grid>
+    </Paper>
+           <Paper
+    elevation={4}
+    sx={{
+      // marginrRight:5,
+      // marginLeft:5,
+      // width: '90%',
+      marginTop:2,
+      height: '85%',
+      borderRadius:'15px',
+      padding:1,
+      
+      
+    }}>
+            <Grid id={'hi'} textAlign={'left'}>
+              <Typography>
+                {response}
+                </Typography>
+
+       
+        
+        </Grid>
+      {/* </Grid> */}
+    </Paper>
+    </Box>
+    <Grid id='onsubmit'>
+
+
+    <Paper
+    elevation={4}
+    sx={{
+      marginTop:3,
+      marginLeft:5,
+      // width: '60%',
+      height: 50,
+      backgroundColor: '#D0D2FF',
+      borderRadius:'15px',
+      padding:1,
+      
+      
+    }}>
+      <Grid container spacing={2} sx={{marginTop:"-10px"}} >
+      <FormControl method='post'>
+
+      <Grid item xs={8} textAlign={'left'} alignContent={'left'}>
+    <TextField
+    required
+    type="text" value={input} onChange={(e) => setInput(e.target.value)} 
+          // required
+          sx={{width: '120%',borderRadius:'50px',border:'none',color:'#424242',marginLeft:'3%'}}
+          // id="outlined-required"
+          // label="Required"
+          id='input'
+          color='secondary'
+          variant="standard"
+          placeholder="Enter your imagined Story title........"
+        />
+        </Grid>
+        <Grid item xs={2}></Grid>
+        <Grid item xs={2}>
+        <IconButton type='submit' onClick={handleSubmit} color="primary" aria-label="add to shopping cart">
+          <SendIcon/>
+      </IconButton>
+
+      </Grid>
+      </FormControl>
+      </Grid>
+        </Paper>
+        {/* </Grid> */}
+        </Grid>
+        </Grid>
+        <Grid item xs={3.5}
+        // padding={'10%'}
+        >
+
+<Box
+      sx={{
+        marginTop:5,
+        marginLeft:5,
+        // width: '20%',
+        height: '90%',
+        backgroundColor: '#dce9f1',
+        borderRadius:'15px',
+        // padding:2
+        
+        
+      }}
+    >
+               <Box
+          sx={{
+            height:'12%',
+            backgroundColor:'#3ba1ff'
+          }}
+          >
+            <Typography
+            sx={{
+              fontSize:25,
+              fontWeight:100,
+              color:'white',
+              paddingTop:2,
+            }}
+            >LEADER-BOARD</Typography>
+            <br/>
+            <Box
+
+            height={70}
+sx={{backgroundColor:'#ffe7e7',
+margin:1.5,
+borderBottomLeftRadius:25,
+borderBottomRightRadius:25,
+
+}}
+
+>
+
+            </Box>
+          </Box>  
+    </Box>
+        </Grid>
+        </Grid>
+      {/* <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
+      <button onClick={handleSubmit}>Submit</button>
+      <div>{response}</div> */}
+    </div>
+</body>
+</html>
